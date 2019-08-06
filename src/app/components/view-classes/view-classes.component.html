@@ -1,0 +1,21 @@
+<div>
+  <h1>fgfdxhd</h1>
+  <h1>fgfdxhd</h1>
+  <h1>fgfdxhd</h1>
+  <h1>fgfdxhd</h1>
+  <h1>fgfdxhd</h1>
+  <h1>fgfdxhd</h1>
+  <!-- <select name="select" #class [(ngModel)]="classId" >
+    <option *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id">
+      {{cls.class_name}}
+    </option>
+  </select> -->
+  <ul>
+    <li *ngFor="let cls of userService.classesForTeacher" [value]="cls.class_id" >
+      <a [routerLink]="['/teachersettings/addPupils/'+cls.class_id]">להוספה מקובץ</a>
+      <a [routerLink]="'/teachersettings/viewClasses/viewStudents/'+cls.class_id">{{cls.class_name}}</a>
+      <!-- <button (click)="navigate(cls.class_id)">{{cls.class_name}}</button> -->
+    </li>
+  </ul>
+</div>  
+<router-outlet></router-outlet>    
